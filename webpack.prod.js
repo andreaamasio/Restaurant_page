@@ -1,8 +1,9 @@
 const path=require("path")
-const HtmlWebpackPlugin=require("html-webpack-plugin")
+const HtmlWebpackPlugin=require("html-webpack-plugin");
+const { Script } = require("vm");
 
 module.exports = {
-    mode: "development",
+    mode: "production",
     entry: './src/index.js',
     output: {
       filename: 'main.js',
@@ -27,7 +28,8 @@ module.exports = {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
             type: "asset/resource",
         }]
-    }
+    },
+    
     
 
   };
